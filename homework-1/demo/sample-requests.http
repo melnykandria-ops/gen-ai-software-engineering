@@ -1,0 +1,66 @@
+### Banking Transactions API — sample requests
+### Use with the VS Code "REST Client" extension, or copy into curl/Postman.
+@base = http://localhost:3000
+
+### Health check
+GET {{base}}/
+
+### 1. Create a deposit (201 Created)
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-00000",
+  "toAccount": "ACC-12345",
+  "amount": 1000.00,
+  "currency": "USD",
+  "type": "deposit"
+}
+
+### 2. Create a transfer (201 Created)
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": 100.50,
+  "currency": "USD",
+  "type": "transfer"
+}
+
+### 3. Validation error (400) — negative amount, bad currency, bad account
+POST {{base}}/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "12345",
+  "toAccount": "ACC-67890",
+  "amount": -5,
+  "currency": "XYZ",
+  "type": "transfer"
+}
+
+### 4. List all transactions
+GET {{base}}/transactions
+
+### 5. Filter by account
+GET {{base}}/transactions?accountId=ACC-12345
+
+### 6. Filter by type
+GET {{base}}/transactions?type=transfer
+
+### 7. Filter by date range + account (combined)
+GET {{base}}/transactions?accountId=ACC-12345&from=2024-01-01&to=2030-12-31
+
+### 8. Get a single transaction (replace the id)
+GET {{base}}/transactions/txn_REPLACE_ME
+
+### 9. Get account balance
+GET {{base}}/accounts/ACC-12345/balance
+
+### 10. Get account summary (Task 4A)
+GET {{base}}/accounts/ACC-12345/summary
+
+### 11. Export transactions as CSV (Task 4C)
+GET {{base}}/transactions/export?format=csv

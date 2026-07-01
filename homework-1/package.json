@@ -1,0 +1,23 @@
+{
+  "name": "banking-transactions-api",
+  "version": "1.0.0",
+  "description": "Homework 1 — a minimal REST API for banking transactions, built with AI assistance (Claude Code).",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "banking",
+    "transactions",
+    "rest-api",
+    "express"
+  ],
+  "author": "melnykandria-ops",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
