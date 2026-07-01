@@ -1,0 +1,31 @@
+# Banking Transactions API — verification log (real output)
+# Generated during AI-assisted testing with Claude Code
+
+$ curl -s $B/  (health)
+{"name":"Banking Transactions API","status":"ok","endpoints":["POST /transactions","GET /transactions","GET /transactions/:id","GET /transactions/export?format=csv","GET /accounts/:accountId/balance","GET /accounts/:accountId/summary"]}
+
+$ POST /transactions (valid transfer) -> expect 201
+{"id":"txn_0a50a0a7-2ba9-4f58-836e-9f6955966af4","fromAccount":"ACC-12345","toAccount":"ACC-67890","amount":100.5,"currency":"USD","type":"transfer","timestamp":"2026-07-01T13:54:38.243Z","status":"completed"}  [HTTP 201]
+
+$ POST /transactions (invalid: -5, XYZ, bad acct) -> expect 400
+{"error":"Validation failed","details":[{"field":"amount","message":"Amount must be a positive number"},{"field":"currency","message":"Invalid currency code (expected ISO 4217, e.g. USD)"},{"field":"fromAccount","message":"Account must match format ACC-XXXXX (alphanumeric)"}]}  [HTTP 400]
+
+$ GET /accounts/ACC-12345/balance
+{"accountId":"ACC-12345","balance":723.75}
+
+$ GET /accounts/ACC-12345/summary
+{"accountId":"ACC-12345","totalDeposits":1000,"totalWithdrawals":276.25,"currentBalance":723.75,"transactionCount":4,"mostRecentTransactionDate":"2026-07-01T13:54:38.243Z"}
+
+$ GET /transactions?type=transfer
+{"count":2,"transactions":[{"id":"txn_0a50a0a7-2ba9-4f58-836e-9f6955966af4","fromAccount":"ACC-12345","toAccount":"ACC-67890","amount":100.5,"currency":"USD","type":"transfer","timestamp":"2026-07-01T13:54:38.243Z","status":"completed"},{"id":"txn_0d54e606-bbf1-44e2-8eef-cbf3003519ca","fromAccount":"ACC-12345","toAccount":"ACC-67890","amount":100.5,"currency":"USD","type":"transfer","timestamp":"2026-07-01T13:45:48.242Z","status":"completed"}]}
+
+$ GET /transactions/txn_unknown -> expect 404
+{"error":"Transaction not found","id":"txn_unknown"}  [HTTP 404]
+
+$ GET /transactions/export?format=csv
+id,fromAccount,toAccount,amount,currency,type,timestamp,status
+txn_0a50a0a7-2ba9-4f58-836e-9f6955966af4,ACC-12345,ACC-67890,100.5,USD,transfer,2026-07-01T13:54:38.243Z,completed
+txn_f6092e17-2f7c-49b0-9abb-12599bc074a9,ACC-00000,ACC-67890,500,EUR,deposit,2026-07-01T13:45:48.254Z,completed
+txn_3158eff4-72ae-4d56-b1c0-f8030fd72990,ACC-12345,,75.25,USD,withdrawal,2026-07-01T13:45:48.249Z,completed
+txn_0d54e606-bbf1-44e2-8eef-cbf3003519ca,ACC-12345,ACC-67890,100.5,USD,transfer,2026-07-01T13:45:48.242Z,completed
+txn_cb98b59a-ec54-4256-8b0f-a3b153bbe703,ACC-00000,ACC-12345,1000,USD,deposit,2026-07-01T13:45:48.209Z,completed
