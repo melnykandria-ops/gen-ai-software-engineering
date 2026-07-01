@@ -111,7 +111,23 @@ homework-1/
   account string, and fixed it to treat `null`/`""`/`undefined` uniformly as "not provided".
 - **Docs & demo** — this `README.md`, `HOWTORUN.md`, `demo/` files and the seed script were AI-generated.
 
-> 📸 Screenshots of the AI interactions (prompts + generated code) and of the running API are in [`docs/screenshots/`](docs/screenshots/).
+---
+
+## 📸 Screenshots
+
+**AI-assisted development (Claude Code):**
+
+| Prompts + generated structure | File generation + testing |
+|---|---|
+| ![AI session 1](docs/screenshots/ai-chat-1.png) | ![AI session 2](docs/screenshots/ai-chat-2.png) |
+
+**Running API:**
+
+| API up (health) | `GET /transactions` | `GET /accounts/ACC-12345/summary` |
+|---|---|---|
+| ![API running](docs/screenshots/api-running.jpg) | ![Transactions list](docs/screenshots/api-list.jpg) | ![Account summary](docs/screenshots/api-summary.jpg) |
+
+More detail in [`docs/screenshots/`](docs/screenshots/).
 
 ---
 
