@@ -6,25 +6,32 @@
   <title>GR8 Support — Ticket Ops</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">GR8</span>
-      <span class="brand-sub">SUPPORT</span>
-    </div>
-    <div class="topbar-title">
-      <span class="bracket-label">[ Support Ops ]</span>
-      <h1>INTELLIGENT TICKET <span class="accent">DESK</span></h1>
-    </div>
+    <div class="brand">GR8_SUPPORT</div>
+    <nav class="topnav">
+      <a href="#stats">OVERVIEW</a>
+      <a href="#queue">QUEUE</a>
+      <a href="/" target="_blank">API</a>
+    </nav>
     <div class="topbar-actions">
       <button class="btn btn-ghost" id="btn-import">IMPORT</button>
-      <button class="btn btn-primary" id="btn-new">+ NEW TICKET</button>
+      <button class="btn btn-primary" id="btn-new">NEW TICKET <span class="arr">&#8594;</span></button>
     </div>
   </header>
+
+  <section class="hero">
+    <div class="hero-corner"></div>
+    <h1>
+      <span class="hero-bracket">[TICKET DESK]</span>
+      <span class="hero-main">FOR SUPPORT<br />CHAMPIONS</span>
+    </h1>
+    <p class="hero-sub">Multi-format import &middot; auto-classification &middot; full decision audit</p>
+  </section>
 
   <main>
     <!-- ===== Stat tiles ===== -->
@@ -84,7 +91,7 @@
     </section>
 
     <!-- ===== Ticket table ===== -->
-    <section class="panel">
+    <section class="panel" id="queue">
       <div class="panel-head">
         <span class="bracket-label">[ Queue ]</span>
         <h2>TICKETS <span class="count-pill" id="table-count">0</span></h2>
