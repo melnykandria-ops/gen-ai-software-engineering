@@ -1,0 +1,21 @@
+{
+  "tickets": [
+    {
+      "customer_id": "CUST-9101",
+      "customer_email": "invalid-email",
+      "subject": "Bad email in JSON",
+      "description": "This description is long enough to pass."
+    },
+    {
+      "customer_id": "CUST-9102",
+      "customer_email": "user9102@example.com",
+      "subject": "",
+      "description": "Subject empty, so this record must fail validation."
+    },
+    {
+      "customer_email": "user9103@example.com",
+      "subject": "Missing customer id",
+      "description": "short"
+    }
+  ]
+}

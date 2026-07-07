@@ -1,0 +1,4 @@
+customer_id,customer_email,customer_name,subject,description,tags,source,browser,device_type
+CUST-9001,not-an-email,Bad Email,Broken email row,too short,billing,web_form,Chrome 126,desktop
+,user9002@example.com,No Id,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,This description is long enough to pass its own check.,login,email,Firefox 127,mobile
+CUST-9003,user9003@example.com,Bad Enums,Enum test row here,This description is definitely long enough.,tag1,carrier_pigeon,Chrome 126,smartwatch

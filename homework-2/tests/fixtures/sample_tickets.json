@@ -1,0 +1,310 @@
+{
+  "tickets": [
+    {
+      "customer_id": "CUST-1050",
+      "customer_email": "user50@example.com",
+      "customer_name": "Iryna Kovalenko",
+      "subject": "Charged twice for my subscription (#50)",
+      "description": "My invoice shows a double charge this month. Please process a refund for the duplicate payment.",
+      "tags": [
+        "login",
+        "urgent-review"
+      ],
+      "metadata": {
+        "source": "web_form",
+        "browser": "Safari 17",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1051",
+      "customer_email": "user51@example.com",
+      "customer_name": "Taras Melnyk",
+      "subject": "Please add dark mode support (#51)",
+      "description": "It would be great to have a dark mode theme. This is just a suggestion but many users would love it.",
+      "tags": [
+        "upload",
+        "crash"
+      ],
+      "metadata": {
+        "source": "email",
+        "browser": "Edge 126",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1052",
+      "customer_email": "user52@example.com",
+      "customer_name": "Sofia Tkachenko",
+      "subject": "Login page returns error 500 (#52)",
+      "description": "Production down: the login page shows error 500 for all users. This is urgent and blocking our whole team.",
+      "tags": [
+        "billing"
+      ],
+      "metadata": {
+        "source": "api",
+        "browser": "Chrome 126",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1053",
+      "customer_email": "user53@example.com",
+      "customer_name": "Andriy Boyko",
+      "subject": "Two-factor authentication code never arrives (#53)",
+      "description": "The 2FA SMS code never arrives so I cannot log in to my account. Important: I need access asap.",
+      "tags": [
+        "ux",
+        "enhancement"
+      ],
+      "metadata": {
+        "source": "chat",
+        "browser": "Firefox 127",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1054",
+      "customer_email": "user54@example.com",
+      "customer_name": "Kateryna Kravchenko",
+      "subject": "Refund for cancelled order not received (#54)",
+      "description": "I cancelled my order two weeks ago and the refund has not appeared on my receipt or bank statement.",
+      "tags": [
+        "outage"
+      ],
+      "metadata": {
+        "source": "phone",
+        "browser": "Safari 17",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1055",
+      "customer_email": "user55@example.com",
+      "customer_name": "Maksym Shevchuk",
+      "subject": "Minor typo on the pricing page (#55)",
+      "description": "There is a cosmetic typo in the second paragraph of the pricing page. Very minor issue.",
+      "tags": [
+        "2fa"
+      ],
+      "metadata": {
+        "source": "web_form",
+        "browser": "Edge 126",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1056",
+      "customer_email": "user56@example.com",
+      "customer_name": "Olena Shevchenko",
+      "subject": "Export to Excel feature request (#56)",
+      "description": "Please add support for exporting reports to Excel format. This enhancement would save us hours.",
+      "tags": [
+        "refund"
+      ],
+      "metadata": {
+        "source": "email",
+        "browser": "Chrome 126",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1057",
+      "customer_email": "user57@example.com",
+      "customer_name": "Dmytro Bondarenko",
+      "subject": "Dashboard loads very slowly (#57)",
+      "description": "The analytics dashboard takes over 30 seconds to load. It fails with a timeout error on mobile.",
+      "tags": [
+        "docs"
+      ],
+      "metadata": {
+        "source": "api",
+        "browser": "Firefox 127",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1058",
+      "customer_email": "user58@example.com",
+      "customer_name": "Iryna Kovalenko",
+      "subject": "Security concern about session handling (#58)",
+      "description": "I noticed my session stays active after logout. This is a security issue that should be reviewed.",
+      "tags": [
+        "export"
+      ],
+      "metadata": {
+        "source": "chat",
+        "browser": "Safari 17",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1059",
+      "customer_email": "user59@example.com",
+      "customer_name": "Taras Melnyk",
+      "subject": "Regression: search stopped working (#59)",
+      "description": "Search worked last week, now it is broken. Steps to reproduce: type any query, expected behavior: results, actual behavior: empty page.",
+      "tags": [
+        "performance"
+      ],
+      "metadata": {
+        "source": "phone",
+        "browser": "Edge 126",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1060",
+      "customer_email": "user60@example.com",
+      "customer_name": "Sofia Tkachenko",
+      "subject": "Can't access my account after password reset (#60)",
+      "description": "I tried to log in but my password no longer works. I am locked out and this is critical for my work.",
+      "tags": [
+        "login",
+        "urgent-review"
+      ],
+      "metadata": {
+        "source": "web_form",
+        "browser": "Chrome 126",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1061",
+      "customer_email": "user61@example.com",
+      "customer_name": "Andriy Boyko",
+      "subject": "Application crashes on file upload (#61)",
+      "description": "The app crashes with a 500 error every time I upload a PDF. Steps to reproduce: open dashboard, click upload, select file.",
+      "tags": [
+        "upload",
+        "crash"
+      ],
+      "metadata": {
+        "source": "email",
+        "browser": "Firefox 127",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1062",
+      "customer_email": "user62@example.com",
+      "customer_name": "Kateryna Kravchenko",
+      "subject": "Charged twice for my subscription (#62)",
+      "description": "My invoice shows a double charge this month. Please process a refund for the duplicate payment.",
+      "tags": [
+        "billing"
+      ],
+      "metadata": {
+        "source": "api",
+        "browser": "Safari 17",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1063",
+      "customer_email": "user63@example.com",
+      "customer_name": "Maksym Shevchuk",
+      "subject": "Please add dark mode support (#63)",
+      "description": "It would be great to have a dark mode theme. This is just a suggestion but many users would love it.",
+      "tags": [
+        "ux",
+        "enhancement"
+      ],
+      "metadata": {
+        "source": "chat",
+        "browser": "Edge 126",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1064",
+      "customer_email": "user64@example.com",
+      "customer_name": "Olena Shevchenko",
+      "subject": "Login page returns error 500 (#64)",
+      "description": "Production down: the login page shows error 500 for all users. This is urgent and blocking our whole team.",
+      "tags": [
+        "outage"
+      ],
+      "metadata": {
+        "source": "phone",
+        "browser": "Chrome 126",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1065",
+      "customer_email": "user65@example.com",
+      "customer_name": "Dmytro Bondarenko",
+      "subject": "Two-factor authentication code never arrives (#65)",
+      "description": "The 2FA SMS code never arrives so I cannot log in to my account. Important: I need access asap.",
+      "tags": [
+        "2fa"
+      ],
+      "metadata": {
+        "source": "web_form",
+        "browser": "Firefox 127",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1066",
+      "customer_email": "user66@example.com",
+      "customer_name": "Iryna Kovalenko",
+      "subject": "Refund for cancelled order not received (#66)",
+      "description": "I cancelled my order two weeks ago and the refund has not appeared on my receipt or bank statement.",
+      "tags": [
+        "refund"
+      ],
+      "metadata": {
+        "source": "email",
+        "browser": "Safari 17",
+        "device_type": "desktop"
+      }
+    },
+    {
+      "customer_id": "CUST-1067",
+      "customer_email": "user67@example.com",
+      "customer_name": "Taras Melnyk",
+      "subject": "Minor typo on the pricing page (#67)",
+      "description": "There is a cosmetic typo in the second paragraph of the pricing page. Very minor issue.",
+      "tags": [
+        "docs"
+      ],
+      "metadata": {
+        "source": "api",
+        "browser": "Edge 126",
+        "device_type": "mobile"
+      }
+    },
+    {
+      "customer_id": "CUST-1068",
+      "customer_email": "user68@example.com",
+      "customer_name": "Sofia Tkachenko",
+      "subject": "Export to Excel feature request (#68)",
+      "description": "Please add support for exporting reports to Excel format. This enhancement would save us hours.",
+      "tags": [
+        "export"
+      ],
+      "metadata": {
+        "source": "chat",
+        "browser": "Chrome 126",
+        "device_type": "tablet"
+      }
+    },
+    {
+      "customer_id": "CUST-1069",
+      "customer_email": "user69@example.com",
+      "customer_name": "Andriy Boyko",
+      "subject": "Dashboard loads very slowly (#69)",
+      "description": "The analytics dashboard takes over 30 seconds to load. It fails with a timeout error on mobile.",
+      "tags": [
+        "performance"
+      ],
+      "metadata": {
+        "source": "phone",
+        "browser": "Firefox 127",
+        "device_type": "desktop"
+      }
+    }
+  ]
+}

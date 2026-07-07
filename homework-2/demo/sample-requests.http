@@ -1,0 +1,102 @@
+### Intelligent Customer Support System — sample requests
+### Use with the VS Code "REST Client" extension, or copy into curl/Postman.
+@base = http://localhost:3000
+
+### Health check
+GET {{base}}/
+
+### 1. Create a ticket (201)
+POST {{base}}/tickets
+Content-Type: application/json
+
+{
+  "customer_id": "CUST-1001",
+  "customer_email": "olena@example.com",
+  "customer_name": "Olena Shevchenko",
+  "subject": "Cannot log in after password reset",
+  "description": "I reset my password but now I am locked out of my account. This is critical for my work.",
+  "tags": ["login", "urgent-review"],
+  "metadata": { "source": "web_form", "browser": "Chrome 126", "device_type": "desktop" }
+}
+
+### 2. Create with auto-classification (note category/priority get filled)
+POST {{base}}/tickets?autoClassify=true
+Content-Type: application/json
+
+{
+  "customer_id": "CUST-1002",
+  "customer_email": "dmytro@example.com",
+  "subject": "Production down — login page error 500",
+  "description": "The login page shows error 500 for all users. This is urgent and blocking the whole team."
+}
+
+### 3. Validation error (400) — bad email, short description
+POST {{base}}/tickets
+Content-Type: application/json
+
+{
+  "customer_id": "CUST-1003",
+  "customer_email": "not-an-email",
+  "subject": "Broken request",
+  "description": "too short"
+}
+
+### 4. Bulk import — CSV (50 tickets, with auto-classification)
+POST {{base}}/tickets/import?format=csv&autoClassify=true
+Content-Type: text/csv
+
+< ../tests/fixtures/sample_tickets.csv
+
+### 5. Bulk import — JSON (20 tickets)
+POST {{base}}/tickets/import
+Content-Type: application/json
+
+< ../tests/fixtures/sample_tickets.json
+
+### 6. Bulk import — XML (30 tickets)
+POST {{base}}/tickets/import
+Content-Type: application/xml
+
+< ../tests/fixtures/sample_tickets.xml
+
+### 7. Bulk import — invalid records (per-record error report)
+POST {{base}}/tickets/import?format=json
+Content-Type: application/json
+
+< ../tests/fixtures/invalid_tickets.json
+
+### 8. List all tickets
+GET {{base}}/tickets
+
+### 9. Combined filtering: category + priority
+GET {{base}}/tickets?category=account_access&priority=urgent
+
+### 10. Filter by status + full-text search
+GET {{base}}/tickets?status=new&q=refund
+
+### 11. Get one ticket (replace the id)
+GET {{base}}/tickets/REPLACE_WITH_ID
+
+### 12. Auto-classify an existing ticket
+POST {{base}}/tickets/REPLACE_WITH_ID/auto-classify
+
+### 13. Auto-classify dry-run (report only, no changes)
+POST {{base}}/tickets/REPLACE_WITH_ID/auto-classify?apply=false
+
+### 14. Manual override (logged as manual_override in the audit trail)
+PUT {{base}}/tickets/REPLACE_WITH_ID
+Content-Type: application/json
+
+{ "category": "billing_question", "priority": "high" }
+
+### 15. Classification audit log for a ticket
+GET {{base}}/tickets/REPLACE_WITH_ID/classification-log
+
+### 16. Resolve a ticket (sets resolved_at)
+PUT {{base}}/tickets/REPLACE_WITH_ID
+Content-Type: application/json
+
+{ "status": "resolved" }
+
+### 17. Delete a ticket (204)
+DELETE {{base}}/tickets/REPLACE_WITH_ID

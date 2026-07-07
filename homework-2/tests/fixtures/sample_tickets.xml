@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>CUST-1070</customer_id>
+    <customer_email>user70@example.com</customer_email>
+    <customer_name>Kateryna Kravchenko</customer_name>
+    <subject>Security concern about session handling (#70)</subject>
+    <description>I noticed my session stays active after logout. This is a security issue that should be reviewed.</description>
+    <tags>
+      <tag>login</tag>
+      <tag>urgent-review</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Safari 17</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1071</customer_id>
+    <customer_email>user71@example.com</customer_email>
+    <customer_name>Maksym Shevchuk</customer_name>
+    <subject>Regression: search stopped working (#71)</subject>
+    <description>Search worked last week, now it is broken. Steps to reproduce: type any query, expected behavior: results, actual behavior: empty page.</description>
+    <tags>
+      <tag>upload</tag>
+      <tag>crash</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Edge 126</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1072</customer_id>
+    <customer_email>user72@example.com</customer_email>
+    <customer_name>Olena Shevchenko</customer_name>
+    <subject>Can't access my account after password reset (#72)</subject>
+    <description>I tried to log in but my password no longer works. I am locked out and this is critical for my work.</description>
+    <tags>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Chrome 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1073</customer_id>
+    <customer_email>user73@example.com</customer_email>
+    <customer_name>Dmytro Bondarenko</customer_name>
+    <subject>Application crashes on file upload (#73)</subject>
+    <description>The app crashes with a 500 error every time I upload a PDF. Steps to reproduce: open dashboard, click upload, select file.</description>
+    <tags>
+      <tag>ux</tag>
+      <tag>enhancement</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Firefox 127</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1074</customer_id>
+    <customer_email>user74@example.com</customer_email>
+    <customer_name>Iryna Kovalenko</customer_name>
+    <subject>Charged twice for my subscription (#74)</subject>
+    <description>My invoice shows a double charge this month. Please process a refund for the duplicate payment.</description>
+    <tags>
+      <tag>outage</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Safari 17</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1075</customer_id>
+    <customer_email>user75@example.com</customer_email>
+    <customer_name>Taras Melnyk</customer_name>
+    <subject>Please add dark mode support (#75)</subject>
+    <description>It would be great to have a dark mode theme. This is just a suggestion but many users would love it.</description>
+    <tags>
+      <tag>2fa</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1076</customer_id>
+    <customer_email>user76@example.com</customer_email>
+    <customer_name>Sofia Tkachenko</customer_name>
+    <subject>Login page returns error 500 (#76)</subject>
+    <description>Production down: the login page shows error 500 for all users. This is urgent and blocking our whole team.</description>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Chrome 126</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1077</customer_id>
+    <customer_email>user77@example.com</customer_email>
+    <customer_name>Andriy Boyko</customer_name>
+    <subject>Two-factor authentication code never arrives (#77)</subject>
+    <description>The 2FA SMS code never arrives so I cannot log in to my account. Important: I need access asap.</description>
+    <tags>
+      <tag>docs</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Firefox 127</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1078</customer_id>
+    <customer_email>user78@example.com</customer_email>
+    <customer_name>Kateryna Kravchenko</customer_name>
+    <subject>Refund for cancelled order not received (#78)</subject>
+    <description>I cancelled my order two weeks ago and the refund has not appeared on my receipt or bank statement.</description>
+    <tags>
+      <tag>export</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1079</customer_id>
+    <customer_email>user79@example.com</customer_email>
+    <customer_name>Maksym Shevchuk</customer_name>
+    <subject>Minor typo on the pricing page (#79)</subject>
+    <description>There is a cosmetic typo in the second paragraph of the pricing page. Very minor issue.</description>
+    <tags>
+      <tag>performance</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Edge 126</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1080</customer_id>
+    <customer_email>user80@example.com</customer_email>
+    <customer_name>Olena Shevchenko</customer_name>
+    <subject>Export to Excel feature request (#80)</subject>
+    <description>Please add support for exporting reports to Excel format. This enhancement would save us hours.</description>
+    <tags>
+      <tag>login</tag>
+      <tag>urgent-review</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Chrome 126</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1081</customer_id>
+    <customer_email>user81@example.com</customer_email>
+    <customer_name>Dmytro Bondarenko</customer_name>
+    <subject>Dashboard loads very slowly (#81)</subject>
+    <description>The analytics dashboard takes over 30 seconds to load. It fails with a timeout error on mobile.</description>
+    <tags>
+      <tag>upload</tag>
+      <tag>crash</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Firefox 127</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1082</customer_id>
+    <customer_email>user82@example.com</customer_email>
+    <customer_name>Iryna Kovalenko</customer_name>
+    <subject>Security concern about session handling (#82)</subject>
+    <description>I noticed my session stays active after logout. This is a security issue that should be reviewed.</description>
+    <tags>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Safari 17</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1083</customer_id>
+    <customer_email>user83@example.com</customer_email>
+    <customer_name>Taras Melnyk</customer_name>
+    <subject>Regression: search stopped working (#83)</subject>
+    <description>Search worked last week, now it is broken. Steps to reproduce: type any query, expected behavior: results, actual behavior: empty page.</description>
+    <tags>
+      <tag>ux</tag>
+      <tag>enhancement</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Edge 126</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1084</customer_id>
+    <customer_email>user84@example.com</customer_email>
+    <customer_name>Sofia Tkachenko</customer_name>
+    <subject>Can't access my account after password reset (#84)</subject>
+    <description>I tried to log in but my password no longer works. I am locked out and this is critical for my work.</description>
+    <tags>
+      <tag>outage</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Chrome 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1085</customer_id>
+    <customer_email>user85@example.com</customer_email>
+    <customer_name>Andriy Boyko</customer_name>
+    <subject>Application crashes on file upload (#85)</subject>
+    <description>The app crashes with a 500 error every time I upload a PDF. Steps to reproduce: open dashboard, click upload, select file.</description>
+    <tags>
+      <tag>2fa</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Firefox 127</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1086</customer_id>
+    <customer_email>user86@example.com</customer_email>
+    <customer_name>Kateryna Kravchenko</customer_name>
+    <subject>Charged twice for my subscription (#86)</subject>
+    <description>My invoice shows a double charge this month. Please process a refund for the duplicate payment.</description>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Safari 17</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1087</customer_id>
+    <customer_email>user87@example.com</customer_email>
+    <customer_name>Maksym Shevchuk</customer_name>
+    <subject>Please add dark mode support (#87)</subject>
+    <description>It would be great to have a dark mode theme. This is just a suggestion but many users would love it.</description>
+    <tags>
+      <tag>docs</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1088</customer_id>
+    <customer_email>user88@example.com</customer_email>
+    <customer_name>Olena Shevchenko</customer_name>
+    <subject>Login page returns error 500 (#88)</subject>
+    <description>Production down: the login page shows error 500 for all users. This is urgent and blocking our whole team.</description>
+    <tags>
+      <tag>export</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Chrome 126</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1089</customer_id>
+    <customer_email>user89@example.com</customer_email>
+    <customer_name>Dmytro Bondarenko</customer_name>
+    <subject>Two-factor authentication code never arrives (#89)</subject>
+    <description>The 2FA SMS code never arrives so I cannot log in to my account. Important: I need access asap.</description>
+    <tags>
+      <tag>performance</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Firefox 127</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1090</customer_id>
+    <customer_email>user90@example.com</customer_email>
+    <customer_name>Iryna Kovalenko</customer_name>
+    <subject>Refund for cancelled order not received (#90)</subject>
+    <description>I cancelled my order two weeks ago and the refund has not appeared on my receipt or bank statement.</description>
+    <tags>
+      <tag>login</tag>
+      <tag>urgent-review</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1091</customer_id>
+    <customer_email>user91@example.com</customer_email>
+    <customer_name>Taras Melnyk</customer_name>
+    <subject>Minor typo on the pricing page (#91)</subject>
+    <description>There is a cosmetic typo in the second paragraph of the pricing page. Very minor issue.</description>
+    <tags>
+      <tag>upload</tag>
+      <tag>crash</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Edge 126</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1092</customer_id>
+    <customer_email>user92@example.com</customer_email>
+    <customer_name>Sofia Tkachenko</customer_name>
+    <subject>Export to Excel feature request (#92)</subject>
+    <description>Please add support for exporting reports to Excel format. This enhancement would save us hours.</description>
+    <tags>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Chrome 126</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1093</customer_id>
+    <customer_email>user93@example.com</customer_email>
+    <customer_name>Andriy Boyko</customer_name>
+    <subject>Dashboard loads very slowly (#93)</subject>
+    <description>The analytics dashboard takes over 30 seconds to load. It fails with a timeout error on mobile.</description>
+    <tags>
+      <tag>ux</tag>
+      <tag>enhancement</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Firefox 127</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1094</customer_id>
+    <customer_email>user94@example.com</customer_email>
+    <customer_name>Kateryna Kravchenko</customer_name>
+    <subject>Security concern about session handling (#94)</subject>
+    <description>I noticed my session stays active after logout. This is a security issue that should be reviewed.</description>
+    <tags>
+      <tag>outage</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Safari 17</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1095</customer_id>
+    <customer_email>user95@example.com</customer_email>
+    <customer_name>Maksym Shevchuk</customer_name>
+    <subject>Regression: search stopped working (#95)</subject>
+    <description>Search worked last week, now it is broken. Steps to reproduce: type any query, expected behavior: results, actual behavior: empty page.</description>
+    <tags>
+      <tag>2fa</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 126</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1096</customer_id>
+    <customer_email>user96@example.com</customer_email>
+    <customer_name>Olena Shevchenko</customer_name>
+    <subject>Can't access my account after password reset (#96)</subject>
+    <description>I tried to log in but my password no longer works. I am locked out and this is critical for my work.</description>
+    <tags>
+      <tag>refund</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Chrome 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1097</customer_id>
+    <customer_email>user97@example.com</customer_email>
+    <customer_name>Dmytro Bondarenko</customer_name>
+    <subject>Application crashes on file upload (#97)</subject>
+    <description>The app crashes with a 500 error every time I upload a PDF. Steps to reproduce: open dashboard, click upload, select file.</description>
+    <tags>
+      <tag>docs</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Firefox 127</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1098</customer_id>
+    <customer_email>user98@example.com</customer_email>
+    <customer_name>Iryna Kovalenko</customer_name>
+    <subject>Charged twice for my subscription (#98)</subject>
+    <description>My invoice shows a double charge this month. Please process a refund for the duplicate payment.</description>
+    <tags>
+      <tag>export</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari 17</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-1099</customer_id>
+    <customer_email>user99@example.com</customer_email>
+    <customer_name>Taras Melnyk</customer_name>
+    <subject>Please add dark mode support (#99)</subject>
+    <description>It would be great to have a dark mode theme. This is just a suggestion but many users would love it.</description>
+    <tags>
+      <tag>performance</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Edge 126</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+</tickets>
