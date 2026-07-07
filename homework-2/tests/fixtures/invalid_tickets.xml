@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>CUST-9201</customer_id>
+    <customer_email>broken-email</customer_email>
+    <subject>Bad email in XML</subject>
+    <description>This description is long enough to pass validation.</description>
+  </ticket>
+  <ticket>
+    <customer_id>CUST-9202</customer_id>
+    <customer_email>user9202@example.com</customer_email>
+    <subject>Short description</subject>
+    <description>too short</description>
+  </ticket>
+</tickets>

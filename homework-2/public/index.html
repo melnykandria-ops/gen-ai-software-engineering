@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GR8 Support — Ticket Ops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">GR8</span>
+      <span class="brand-sub">SUPPORT</span>
+    </div>
+    <div class="topbar-title">
+      <span class="bracket-label">[ Support Ops ]</span>
+      <h1>INTELLIGENT TICKET <span class="accent">DESK</span></h1>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" id="btn-import">IMPORT</button>
+      <button class="btn btn-primary" id="btn-new">+ NEW TICKET</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Stat tiles ===== -->
+    <section class="stats" id="stats">
+      <div class="tile"><div class="tile-num" id="stat-total">0</div><div class="tile-label">Total tickets</div></div>
+      <div class="tile"><div class="tile-num tile-critical" id="stat-urgent">0</div><div class="tile-label">Urgent</div></div>
+      <div class="tile"><div class="tile-num" id="stat-open">0</div><div class="tile-label">Open</div></div>
+      <div class="tile"><div class="tile-num tile-good" id="stat-resolved">0</div><div class="tile-label">Resolved / Closed</div></div>
+    </section>
+
+    <!-- ===== Breakdown charts ===== -->
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="bracket-label">[ Categories ]</span>
+          <h2>TICKETS BY CATEGORY</h2>
+        </div>
+        <div class="barchart" id="chart-category" aria-label="Tickets by category"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="bracket-label">[ Priority ]</span>
+          <h2>TICKETS BY PRIORITY</h2>
+        </div>
+        <div class="barchart" id="chart-priority" aria-label="Tickets by priority"></div>
+      </div>
+    </section>
+
+    <!-- ===== Filters ===== -->
+    <section class="filters">
+      <input type="search" id="f-q" placeholder="Search subject / description…" />
+      <select id="f-category">
+        <option value="">Category: all</option>
+        <option value="account_access">account_access</option>
+        <option value="technical_issue">technical_issue</option>
+        <option value="billing_question">billing_question</option>
+        <option value="feature_request">feature_request</option>
+        <option value="bug_report">bug_report</option>
+        <option value="other">other</option>
+      </select>
+      <select id="f-priority">
+        <option value="">Priority: all</option>
+        <option value="urgent">urgent</option>
+        <option value="high">high</option>
+        <option value="medium">medium</option>
+        <option value="low">low</option>
+      </select>
+      <select id="f-status">
+        <option value="">Status: all</option>
+        <option value="new">new</option>
+        <option value="in_progress">in_progress</option>
+        <option value="waiting_customer">waiting_customer</option>
+        <option value="resolved">resolved</option>
+        <option value="closed">closed</option>
+      </select>
+      <button class="btn btn-ghost" id="btn-reset">RESET</button>
+    </section>
+
+    <!-- ===== Ticket table ===== -->
+    <section class="panel">
+      <div class="panel-head">
+        <span class="bracket-label">[ Queue ]</span>
+        <h2>TICKETS <span class="count-pill" id="table-count">0</span></h2>
+      </div>
+      <div class="table-wrap">
+        <table id="ticket-table">
+          <thead>
+            <tr>
+              <th>Subject</th><th>Customer</th><th>Category</th><th>Priority</th><th>Status</th><th>Created</th>
+            </tr>
+          </thead>
+          <tbody id="ticket-rows"></tbody>
+        </table>
+        <div class="empty" id="table-empty" hidden>No tickets match. Create one or import a batch.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Ticket drawer ===== -->
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-head">
+      <span class="bracket-label">[ Ticket ]</span>
+      <button class="btn-x" id="drawer-close" aria-label="Close">×</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <!-- ===== New ticket modal ===== -->
+  <dialog class="modal" id="modal-new">
+    <form id="form-new" method="dialog">
+      <div class="modal-head"><span class="bracket-label">[ New ticket ]</span><h2>CREATE TICKET</h2></div>
+      <div class="form-grid">
+        <label>Customer ID <input name="customer_id" required placeholder="CUST-1001" /></label>
+        <label>Email <input name="customer_email" type="email" required placeholder="user@example.com" /></label>
+        <label class="span2">Name <input name="customer_name" placeholder="Olena Shevchenko" /></label>
+        <label class="span2">Subject <input name="subject" required maxlength="200" placeholder="Can't log in after password reset" /></label>
+        <label class="span2">Description <textarea name="description" required minlength="10" maxlength="2000" rows="4" placeholder="Describe the issue (min 10 chars)…"></textarea></label>
+        <label>Source
+          <select name="source">
+            <option value="web_form">web_form</option><option value="email">email</option>
+            <option value="api">api</option><option value="chat">chat</option><option value="phone">phone</option>
+          </select>
+        </label>
+        <label>Tags (comma-sep) <input name="tags" placeholder="login, urgent-review" /></label>
+        <label class="check span2"><input type="checkbox" name="auto_classify" checked /> Auto-classify on create</label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close>CANCEL</button>
+        <button type="submit" class="btn btn-primary">CREATE</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ===== Import modal ===== -->
+  <dialog class="modal" id="modal-import">
+    <form id="form-import" method="dialog">
+      <div class="modal-head"><span class="bracket-label">[ Bulk import ]</span><h2>IMPORT TICKETS</h2></div>
+      <div class="form-grid">
+        <label>Format
+          <select name="format"><option value="csv">CSV</option><option value="json">JSON</option><option value="xml">XML</option></select>
+        </label>
+        <label>File <input type="file" name="file" accept=".csv,.json,.xml,text/csv,application/json,application/xml" /></label>
+        <label class="span2">…or paste content <textarea name="content" rows="6" placeholder="Paste CSV / JSON / XML here"></textarea></label>
+        <label class="check span2"><input type="checkbox" name="autoClassify" checked /> Auto-classify imported tickets</label>
+      </div>
+      <div class="import-summary" id="import-summary" hidden></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close>CLOSE</button>
+        <button type="submit" class="btn btn-primary">IMPORT</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast-stack" id="toasts"></div>
+  <div class="chart-tip" id="chart-tip" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

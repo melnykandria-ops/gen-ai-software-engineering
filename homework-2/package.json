@@ -1,0 +1,46 @@
+{
+  "name": "support-ticket-system",
+  "version": "1.0.0",
+  "description": "Homework 2 — Intelligent Customer Support System: multi-format ticket import, auto-classification, AI-generated tests & docs (built with Claude Code).",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage",
+    "fixtures": "node scripts/generate-fixtures.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [
+    "support-tickets",
+    "rest-api",
+    "auto-classification",
+    "express"
+  ],
+  "author": "melnykandria-ops",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "express": "^4.19.2",
+    "fast-xml-parser": "^4.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 85,
+        "branches": 85,
+        "functions": 85,
+        "lines": 85
+      }
+    }
+  }
+}
